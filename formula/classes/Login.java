@@ -47,13 +47,13 @@ public class Login implements ActionListener
     {
     	//Construimos los elementos
     	//@Param  "JFrame" nombre de la Variable para la ventana de inicio de sesión*/ 
-    	Ventana=new JFrame ("INICIO DE SESIÓN");
+    	Ventana=new JFrame ("Inicio de sesión");
 
         //@Param "new JLabel" colocamos el texto para pedir el nombre de usuario en la ventana*/
        	jlusuario=new JLabel("Nombre de usuario");
        	//@Param "new JButton" colocamos los botones de iniciar y cancelar en la ventana de inicio*/
-       	jbiniciar=new JButton ("INICIAR");
-       	jbcerrar=new JButton ("CANCELAR");
+       	jbiniciar=new JButton ("Iniciar");
+       	jbcerrar=new JButton ("Cancelar");
        	jtusuario=new JTextField("");
        	jtusuario.setToolTipText("Digite aquí su nombre de usuario");//@Param "setToolTipText" con este parametro creamos el cuadro de dialogo para el nombre de usuario */
        	jlcontraseña=new JLabel("Contraseña");//Se crea el cuadro de la contaceña*/
@@ -135,7 +135,7 @@ public class Login implements ActionListener
     		else
     		{
     			//@Param "showMessageDialog" Este parametro nos saca el mensaje de error, tiene mensaje de error y otro con el nombre de la ventana*/
-    			JOptionPane.showMessageDialog(null,"USUARIO O CONTRASEÑA INCORRECTA","PRECAUTION",JOptionPane.ERROR_MESSAGE);
+    			JOptionPane.showMessageDialog(null,"Usuario o contraseña incorrecto","Advertencia!",JOptionPane.ERROR_MESSAGE);
     		}
     	}
 
