@@ -7,7 +7,7 @@
  */
 
 //Bloque Libreria
-import javax.swing.*;//@Param " Swing" es la libreria de componentes gr·ficos*/
+import javax.swing.*;//@Param " Swing" es la libreria de componentes gr√°ficos*/
 import java.util.*;//@Param "Util" es la libreria de utilidades, como fechas, horas, perifericos*/
 import java.awt.event.*;//@param "event" libreria para eventos del sistema(algo que se va a ejecutar)*/
 import java.awt.*;//Libreria de acciones(algo que se ejecuta)*/
@@ -21,9 +21,9 @@ import javax.swing.table.DefaultTableModel;
 public class registro_de_usuario implements ActionListener {
 
 	JFrame Ventana;
-	JLabel jlcorreo,jlusuario, jlcontraseÒa,jlfondo;//Estos son los LABEL
+	JLabel jlcorreo,jlusuario, jlcontrase√±a,jlfondo;//Estos son los LABEL
 	JTextField jtusuario;//Estos son los TEXTBOX
-	JPasswordField jpcontraseÒa;
+	JPasswordField jpcontrase√±a;
 	JTextField jtcorreo;
     JButton jbguardar;//@param  "JButton" parametro par crear botones*/
     JButton jbeliminar;
@@ -54,19 +54,19 @@ public class registro_de_usuario implements ActionListener {
     	Ventana=new JFrame ("REGISTRAR");
 
 
-       	jlusuario=new JLabel("Nombre de usuario");
+       	jlusuario=new JLabel("NOMBRE DEL USUARIO");
        	jlcorreo=new JLabel("EMAIL");
        	jtcorreo=new JTextField("");
-       	jlcorreo.setToolTipText("Digite aquÌ su Email");
+       	jlcorreo.setToolTipText("Digite aqu√≠ su Email");
        	jbguardar=new JButton ("GUARDAR");
        	jbeliminar=new JButton ("ELIMINAR");
        	jbconsultar=new JButton ("CONSULTAR");
        	jbmodificar=new JButton("MODIFICAR");
        	jtusuario=new JTextField("");
-       	jtusuario.setToolTipText("Digite aquÌ su nombre de usuario");
-       	jlcontraseÒa=new JLabel("ContraseÒa");
-		jpcontraseÒa=new JPasswordField("");
-       	jpcontraseÒa.setToolTipText("Digite aquÌ su clave de 10 digitos");
+       	jtusuario.setToolTipText("Digite aqu√≠ su nombre de usuario");
+       	jlcontrase√±a=new JLabel("Contrase√±a");
+		jpcontrase√±a=new JPasswordField("");
+       	jpcontrase√±a.setToolTipText("Digite aqu√≠ su clave de 10 digitos");
        	Fondo=new ImageIcon("imagenes\\F1.jpg");//@param "ImageIcon" Poniendo imagen de Fondo*/
        	jlfondo=new JLabel(Fondo);
 
@@ -78,7 +78,7 @@ public class registro_de_usuario implements ActionListener {
     //@param "new Vector" vector para las columnas para el registro de diferentes usuarios*/
   	NomColumnas = new Vector();
   	NomColumnas.add("Usuario");
-  	NomColumnas.add("ContraseÒa");
+  	NomColumnas.add("Contrase√±a");
   	NomColumnas.add("Email");
 
 
@@ -98,26 +98,26 @@ public class registro_de_usuario implements ActionListener {
 
 
 
-       	//Le damos ubicaciÛn a los elementos dentro de la ventana
+       	//Le damos ubicaci√≥n a los elementos dentro de la ventana
     	//Se puede utilizar RESHAPE o SETBOUNDS
     	jlusuario.reshape(5,5,130,25); //Las medidas se componen de X,Y,ANCHO y LARGO
 		jtusuario.reshape(140,5,130,25);
-		jlcontraseÒa.reshape(5,40,130,25);
-		jpcontraseÒa.reshape(140,40,130,25);
+		jlcontrase√±a.reshape(5,40,130,25);
+		jpcontrase√±a.reshape(140,40,130,25);
 		jlcorreo.reshape(5,80,130,25);
 		jtcorreo.reshape(140,80,130,25);
 		jbguardar.reshape (10,200,90,25);
 		jbeliminar.reshape(100,200,90,25);
 		jbconsultar.reshape (190,200,110,25);
 		jbmodificar.reshape(300,200,100,25);
-		jlfondo.reshape(0,0,900,600);    //tamaÒo de fondo
+		jlfondo.reshape(0,0,900,600);    //tama√±o de fondo
 
 
 		//Agregamos los elementos al JFrame
 		Ventana.add(jlusuario);
 		Ventana.add(jtusuario);
-		Ventana.add(jlcontraseÒa);
-		Ventana.add(jpcontraseÒa);
+		Ventana.add(jlcontrase√±a);
+		Ventana.add(jpcontrase√±a);
 		Ventana.add(jlcorreo);
 		Ventana.add(jtcorreo);
 		Ventana.add(jbguardar);
@@ -135,13 +135,13 @@ public class registro_de_usuario implements ActionListener {
 
 
 
-		//@Param "resize" Comando para poner el tamaÒo de la ventana*/
+		//@Param "resize" Comando para poner el tama√±o de la ventana*/
 		Ventana.resize(900,600);
 		//@Param "setLocationRelativeTo" comando para centrar la Ventana*/
 		Ventana.setLocationRelativeTo(null);
-		//@Param "setResizable" comando para bloquear el tamaÒo de la ventana, lo deja fijo*/
+		//@Param "setResizable" comando para bloquear el tama√±o de la ventana, lo deja fijo*/
 		Ventana.setResizable(false);
-		//Comando para saber que el diseÒador de todo soy yo
+		//Comando para saber que el dise√±ador de todo soy yo
 		Ventana.setLayout(null);
 		Ventana.getContentPane().setBackground(Color.white);
 		Ventana.show();
@@ -213,7 +213,7 @@ public class registro_de_usuario implements ActionListener {
    		r = mat.BuscarRegistro(JOptionPane.showInputDialog("Ingrese Usuario")); //Mensaje informativo*/
    		if(r!=null){
    			jtusuario.setText(r[0]);
-   			jpcontraseÒa.setText(r[1]);
+   			jpcontrase√±a.setText(r[1]);
    			jtcorreo.setText(r[2]);
 
 
@@ -225,7 +225,7 @@ public class registro_de_usuario implements ActionListener {
     void guardar(){
    		try{
 	   		String Usuario = jtusuario.getText();
-	   		String Contrasena= jpcontraseÒa.getText();
+	   		String Contrasena= jpcontrase√±a.getText();
 	   		String Email=jtcorreo.getText();
 
 
@@ -242,7 +242,7 @@ public class registro_de_usuario implements ActionListener {
     void Nuevo()
     {
     	jtusuario.setText("");
-    	jpcontraseÒa.setText("");
+    	jpcontrase√±a.setText("");
     	jtcorreo.setText("");
     }
 
@@ -252,7 +252,7 @@ public class registro_de_usuario implements ActionListener {
 	{
 
 			String Usuario = jtusuario.getText();
-	   		String Contrasena= jpcontraseÒa.getText();
+	   		String Contrasena= jpcontrase√±a.getText();
 	   		String Email=jtcorreo.getText();
 
 	   		mat.ModificarRegistro(Usuario,Contrasena,Email);
