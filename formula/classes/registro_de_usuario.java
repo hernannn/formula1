@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class registro_de_usuario implements ActionListener {
 
-	JFrame Ventana;
+	JFrame Ventan
 	JLabel jlcorreo,jlusuario, jlcontraseña,jlfondo;//Estos son los LABEL
 	JTextField jtusuario;//Estos son los TEXTBOX
 	JPasswordField jpcontraseña;
